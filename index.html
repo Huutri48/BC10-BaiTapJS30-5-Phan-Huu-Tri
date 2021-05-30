@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/AlexEmashev/lsb-lightbox/master/dist/lsb.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container text-center align-middle">
+      <h1 class="align-middle glitch" data-glitch="Bài Tập">Bài Tập</h1>
+      <button
+        class="rainbow rainbow-1"
+        data-toggle="modal"
+        data-target="#number1"
+      >
+        Bài 1
+      </button>
+      <button
+        class="rainbow rainbow-2"
+        data-toggle="modal"
+        data-target="#number2"
+      >
+        Bài 2
+      </button>
+      <button
+        class="rainbow rainbow-3"
+        data-toggle="modal"
+        data-target="#number3"
+      >
+        Bài 3
+      </button>
+      <button
+        class="rainbow rainbow-4"
+        data-toggle="modal"
+        data-target="#number4"
+      >
+        Bài 4
+      </button>
+      <button
+        class="rainbow rainbow-5"
+        data-toggle="modal"
+        data-target="#number5"
+      >
+        Bài 5</button
+      ><br /><br />
+      <button
+        class="rainbow rainbow-1"
+        data-toggle="modal"
+        data-target="#number6"
+      >
+        Bài 6
+      </button>
+      <button
+        class="rainbow rainbow-2"
+        data-toggle="modal"
+        data-target="#number7"
+      >
+        Bài 7
+      </button>
+      <button
+        class="rainbow rainbow-3"
+        data-toggle="modal"
+        data-target="#number8"
+      >
+        Bài 8
+      </button>
+      <button
+        class="rainbow rainbow-4"
+        data-toggle="modal"
+        data-target="#number9"
+      >
+        Bài 9
+      </button>
+      <button
+        class="rainbow rainbow-5"
+        data-toggle="modal"
+        data-target="#number10"
+      >
+        Bài 10
+      </button>
+    </div>
+    <!-- Modal 1 -->
+    <div
+      class="modal fade"
+      id="number1"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h1 class="text-center">Bài 1</h1>
+          <button class="btn" onclick="bai1()">In một bảng số từ 1-100</button>
+          <p id="bai1" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 2 -->
+    <div
+      class="modal fade"
+      id="number2"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h1 class="text-center">Bài 2</h1>
+          <h2>tìm và in ra các số nguyên tố trong mảng</h2>
+          <input type="text" placeholder="Nhập vào các số" id="txtNumber" />
+          <button class="btn" onclick="addNumberbai2()">Thêm số</button>
+          <button class="btn" onclick="bai2()">In số nguyên tố</button>
+          <p id="bai2" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 3 -->
+    <div
+      class="modal fade"
+      id="number3"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h1 class="text-center">Bài 3</h1>
+          <h2>tính S=(2+3+4...+n)+2n</h2>
+          <input type="text" placeholder="Nhập vào số n" id="txtNumber3" />
+          <button class="btn" onclick="bai3()">Tính</button>
+          <p id="bai3" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 4 -->
+    <div
+      class="modal fade"
+      id="number4"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h1 class="text-center">Bài 4</h1>
+          <h2>tính số lượng ước số của n</h2>
+          <input type="text" placeholder="Nhập vào số n" id="txtNumber4" />
+          <button class="btn" onclick="bai4()">Tính</button>
+          <p id="bai4" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 5 -->
+    <div
+      class="modal fade"
+      id="number5"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h1 class="text-center">Bài 5</h1>
+          <h2>tìm số đảo ngược của 1 số nguyên dương n nhập từ bàn phím</h2>
+          <input type="text" placeholder="Nhập vào số n" id="txtNumber5" />
+          <button class="btn" onclick="bai5()">Đảo Ngược Số</button>
+          <p id="bai5" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 6 -->
+    <div
+      class="modal fade"
+      id="number6"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h1 class="text-center">Bài 6</h1>
+          <h2>Tìm x nguyên dương lớn nhất, biết 1+2+3+...+x ≤100</h2>
+          <button class="btn" onclick="bai6()">Đáp Án</button>
+          <p id="bai6" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 7 -->
+    <div
+      class="modal fade"
+      id="number7"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h1 class="text-center">Bài 7</h1>
+          <h2>nhận vào số n, in ra bảng cửu chương tương ứng với số đó</h2>
+          <input type="text" placeholder="Nhập vào số n" id="txtNumber7" />
+          <button class="btn" onclick="bai7()">Bảng Cửu Chương Của Số</button>
+          <p id="bai7" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 8 -->
+    <div
+      class="modal fade"
+      id="number8"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h1 class="text-center">Bài 8</h1>
+          <h2>
+            Để chia cho mỗi player 3 lá theo luật, chia lần lượt mỗi người 1 lá
+          </h2>
+          <button class="btn" onclick="bai8()">Chia Bài</button>
+          <p id="bai8" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 9 -->
+    <div
+      class="modal fade"
+      id="number9"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <h1 class="text-center">Bài 9</h1>
+          <h2>
+            Tìm số gà, số chó khi số tổng số con là m và tổng số chân là n
+          </h2>
+          <input
+            type="text"
+            placeholder="Tổng Số Con Chó Và Con Gà"
+            id="txtNumber9M"
+          />
+          <input type="text" placeholder="Tổng Số Chân" id="txtNumber9N" />
+          <button class="btn" onclick="bai9()">Đáp Án</button>
+          <p id="bai9" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 10 -->
+    <div
+      class="modal fade"
+      id="number10"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h1 class="text-center">Bài 10</h1>
+          <h2>Tìm góc lệch giữa kim giờ và kim phút</h2>
+          <input type="text" placeholder="Số Giờ" id="txtNumber10H" />
+          <input type="text" placeholder="Số Phút" id="txtNumber10M" />
+          <button class="btn" onclick="bai10()">
+            góc lệch giữa kim giờ và kim phút
+          </button>
+          <p id="bai10" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

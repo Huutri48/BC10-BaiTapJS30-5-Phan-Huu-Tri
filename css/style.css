@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
+
+body {
+  font-family: "Nunito", sans-serif;
+
+  background: linear-gradient(-45deg, #eec1b3, #ebb4c9, #b1d7e5, #bbf8ea);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.glitch {
+  font-family: "Nunito", sans-serif;
+  font-size: 8.125em;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #000;
+  letter-spacing: 5px;
+}
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-glitch);
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+.glitch:after {
+  color: #f0f;
+  z-index: -2;
+}
+.glitch:before {
+  color: #0ff;
+  z-index: -1;
+}
+.glitch:hover:before {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+}
+.glitch:hover:after {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
+}
+@media only screen and (max-width: 400px) {
+  .glitch {
+    font-size: 3em;
+  }
+}
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-5px, 5px);
+  }
+  40% {
+    transform: translate(-5px, -5px);
+  }
+  60% {
+    transform: translate(5px, 5px);
+  }
+  80% {
+    transform: translate(5px, -5px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+.a {
+  color: #e7484f;
+}
+.b {
+  color: #f68b1d;
+}
+.c {
+  color: #fced00;
+}
+.d {
+  color: #009e4f;
+}
+.e {
+  color: #00aac3;
+}
+.f {
+  color: #732982;
+}
+
+.container {
+  height: 100%;
+  margin-top: 15%;
+}
+h1 {
+  margin-bottom: 50px;
+  font-size: 70px;
+  font-weight: bolder;
+}
+button.rainbow {
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rainbow {
+  background-color: #343a40;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.rainbow-1:hover {
+  background-image: linear-gradient(
+    90deg,
+    #00c0ff 0%,
+    #ffcf00 49%,
+    #fc4f4f 80%,
+    #00c0ff 100%
+  );
+  animation: slidebg 5s linear infinite;
+}
+
+.rainbow-2:hover {
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  animation: slidebg 2s linear infinite;
+}
+
+.rainbow-3:hover {
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    red
+  );
+  animation: slidebg 2s linear infinite;
+}
+
+.rainbow-4:hover {
+  background-image: linear-gradient(
+    to right,
+    #e7484f,
+    #f68b1d,
+    #fced00,
+    #009e4f,
+    #00aac3,
+    #732982
+  );
+  animation: slidebg 2s linear infinite;
+}
+
+.rainbow-5:hover {
+  background-image: linear-gradient(
+    to right,
+    #e7484f,
+    #e7484f 16.65%,
+    #f68b1d 16.65%,
+    #f68b1d 33.3%,
+    #fced00 33.3%,
+    #fced00 49.95%,
+    #009e4f 49.95%,
+    #009e4f 66.6%,
+    #00aac3 66.6%,
+    #00aac3 83.25%,
+    #732982 83.25%,
+    #732982 100%,
+    #e7484f 100%
+  );
+  animation: slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+
+.follow {
+  margin-top: 40px;
+}
+
+.follow a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.modal-content {
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 0.5830707282913166) 100%
+  );
+  padding: 2% 20%;
+  margin-top: -200px;
+}
+.modal {
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0.5102415966386555) 0%,
+    rgba(151, 232, 160, 0.4962359943977591) 44%,
+    rgba(148, 231, 233, 0.4514180672268907) 100%
+  );
+}
+.modal-dialog {
+  margin-top: 300px;
+  max-width: 80%;
+}
+
+button.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 50px;
+  background-color: red;
+  color: white;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+.modal h1,
+h2,
+p {
+  padding: 20px 0;
+}
+button.btn {
+  margin-top: 30px;
+  background-color: tomato;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(
+    90deg,
+    rgba(147, 141, 255, 1) 0%,
+    rgba(45, 150, 226, 1) 27%,
+    rgba(52, 189, 226, 1) 38%,
+    rgba(119, 235, 177, 1) 53%,
+    rgba(221, 236, 74, 1) 74%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background-size: 1200% 1200%;
+  -webkit-animation: buttonGradient 2s ease infinite;
+  -moz-animation: buttonGradient 2s ease infinite;
+  -o-animation: buttonGradient 2s ease infinite;
+  animation: buttonGradient 2s ease infinite;
+}
+@-webkit-keyframes buttonGradient {
+  0% {
+    background-position: 96% 0%;
+  }
+  50% {
+    background-position: 5% 100%;
+  }
+  100% {
+    background-position: 96% 0%;
+  }
+}
+@-moz-keyframes buttonGradient {
+  0% {
+    background-position: 96% 0%;
+  }
+  50% {
+    background-position: 5% 100%;
+  }
+  100% {
+    background-position: 96% 0%;
+  }
+}
+@-o-keyframes buttonGradient {
+  0% {
+    background-position: 96% 0%;
+  }
+  50% {
+    background-position: 5% 100%;
+  }
+  100% {
+    background-position: 96% 0%;
+  }
+}
+@keyframes buttonGradient {
+  0% {
+    background-position: 96% 0%;
+  }
+  50% {
+    background-position: 5% 100%;
+  }
+  100% {
+    background-position: 96% 0%;
+  }
+}
+button.btn:hover {
+  color: white;
+  background: black;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+input {
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  padding: 10px;margin-bottom: 30px;
+}
+p {
+  font-size: 1.5rem;
+}
